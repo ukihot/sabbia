@@ -1,5 +1,8 @@
+import { tauri } from "@tauri-apps/api";
 import { Link, Navigate } from "solid-app-router";
 import { Component } from "solid-js";
+
+
 
 const App: Component = () => {
   return (

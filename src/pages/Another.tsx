@@ -1,5 +1,7 @@
 import { Link, useIsRouting } from "solid-app-router";
 import { Component, createEffect } from "solid-js";
+import { tauri } from "@tauri-apps/api";
+let t = await tauri.invoke("fetch_messages") as HTMLInputElement;
 
 const Another: Component = () => {
   return (
@@ -8,6 +10,7 @@ const Another: Component = () => {
       <Link href="/">
         <button>Back</button>
       </Link>
+      <p>{t}</p>
     </div>
   );
 };
