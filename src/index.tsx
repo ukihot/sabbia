@@ -6,7 +6,7 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const Another = lazy(() => sleep(1000).then(() => import("./Another")));
+const Another = lazy(() => sleep(1000).then(() => import("./pages/Another")));
 const App = lazy(() => import("./App"));
 
 render(

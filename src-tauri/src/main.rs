@@ -3,6 +3,11 @@
   windows_subsystem = "windows"
 )]
 
+#[tauri::command]
+fn fetch_messages() -> Vec<String> {
+    vec!["T".into(), "Y".into(), "X".into(), "O".into()]
+}
+
 fn main() {
   let context = tauri::generate_context!();
   tauri::Builder::default()
