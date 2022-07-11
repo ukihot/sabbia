@@ -1,5 +1,7 @@
-export namespace PETALS  {
-    export const PRODUCT_NAME = '商品名';
-    export const PRODUCT_CODE = '商品コード';
-    export const STANDARD_NAME = '規格';
-}
+export const Petals = {
+    productCode: '商品コード',
+    productName: '商品名',
+    standardName: '規格名',
+    userId: 'ユーザID',
+    pass: 'パスワード',
+} as const;

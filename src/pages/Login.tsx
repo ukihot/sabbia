@@ -1,32 +1,33 @@
-import { Link, Navigate } from "solid-app-router";
-import { Component , createSignal} from "solid-js";
-import { render } from "solid-js/web";
 import TextField from "@suid/material/TextField"
 import Box from "@suid/material/Box";
-import Button from "@suid/material/Button";
-import { PETALS } from "../utils/consts";
-const [getValue, setValue] = createSignal();
+import { Petals } from "../utils/consts";
 
-const PRODUCT_NAME = PETALS.PRODUCT_NAME;
-
-function App() {
+function login() {
   return (
     <Box
       component="form"
       sx={{
-        "& > :not(style)": { m: 1, width: "50ch" },
+        "& > :not(style)": { m: 1, width: "25ch" },
         textAlign: "center",
       }}
       noValidate
       autocomplete="off"
     >
-      <TextField
+    <TextField
         id="outlined-basic"
-        label={PRODUCT_NAME}
+        label={Petals.userId}
         variant="outlined"
-        fullWidth />
-    </Box>
-  );
-}
+        fullWidth
+      />
+    <TextField
+          id="filled-password-input"
+          label={Petals.pass}
+          type="password"
+          autoComplete="current-password"
+          variant="filled"
+      />
+      </Box>
+);
+};
 
-export default App;
+export default login;

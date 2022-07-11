@@ -1,25 +1,28 @@
-import { Link, useIsRouting } from "solid-app-router";
-import { tauri } from "@tauri-apps/api";
-import SendIcon from '@suid/icons-material/Send'
-import Button from "@suid/material/Button";
-let t = await tauri.invoke("fetch_messages") as HTMLInputElement;
 
-function Another() {
+import { createSignal} from "solid-js";
+import TextField from "@suid/material/TextField"
+import Box from "@suid/material/Box";
+const [getValue, setValue] = createSignal();
+import { Petals } from "../utils/consts";
+
+function requestApply() {
   return (
-    <div>
-      <Link href="/">
-        <Button
-              variant="contained"
-              type="submit"
-              aria-live="polite"
-              endIcon={<SendIcon />}
-            >
-              メールを送信
-            </Button>
-      </Link>
-      <p>{t}</p>
-    </div>
+    <Box
+      component="form"
+      sx={{
+        "& > :not(style)": { m: 1, width: "50ch" },
+        textAlign: "center",
+      }}
+      noValidate
+      autocomplete="off"
+    >
+      <TextField
+        id="outlined-basic"
+        label={Petals.productName}
+        variant="outlined"
+        fullWidth />
+    </Box>
   );
 };
 
-export default Another;
+export default requestApply;

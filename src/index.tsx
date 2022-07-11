@@ -6,16 +6,16 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const Another = lazy(() => import("./pages/RequestApply"));
-const App = lazy(() => import("./pages/Login"));
+const requestApply = lazy(() => import("./pages/RequestApply"));
+const login = lazy(() => import("./pages/Login"));
 
 render(
   () => (
     <Router>
       <Suspense fallback="Loading...">
         <Routes>
-          <Route path="/" component={App} />
-          <Route path="/another" component={Another} />
+          <Route path="/" component={login} />
+          <Route path="/requestApply" component={requestApply} />
         </Routes>
       </Suspense>
     </Router>
