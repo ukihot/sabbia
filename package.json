@@ -17,7 +17,6 @@
     "vite-plugin-solid": "^2.2.6"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@suid/icons-material": "^0.2.5",
     "@suid/material": "^0.4.3",
