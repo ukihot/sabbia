@@ -1,6 +1,7 @@
 import TextField from "@suid/material/TextField"
 import Box from "@suid/material/Box";
 import { Petals } from "../utils/consts";
+import Button from "@suid/material/Button";
 
 function login() {
   return (
@@ -26,7 +27,8 @@ function login() {
           autoComplete="current-password"
           variant="filled"
       />
-      </Box>
+      <Button variant="contained">ログイン</Button>
+    </Box>
 );
 };
 
