@@ -4,4 +4,4 @@ export const Petals = {
     standardName: '規格名',
     userId: 'ユーザID',
     pass: 'パスワード',
-} as const;
+} as const
