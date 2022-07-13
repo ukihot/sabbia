@@ -8,17 +8,30 @@
     "build": "vite build",
     "serve": "vite preview",
     "tauri": "tauri",
-    "format": "prettier --write \"./src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"./src/**/*.{ts,tsx}\"",
+    "test": "uvu -r solid-register",
+    "test:coverage": "c8 uvu -r solid-register"
+  },
+  "jest": {
+    "preset": "solid-jest/preset/browser"
   },
   "license": "MIT",
   "devDependencies": {
     "@tauri-apps/cli": "^1.0.0",
+    "@types/jest": "^28.1.4",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
+    "c8": "^7.11.3",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
+    "jest": "^28.1.2",
+    "jsdom": "^20.0.0",
     "prettier": "^2.7.1",
+    "solid-jest": "^0.2.0",
+    "solid-register": "^0.2.5",
+    "solid-testing-library": "^0.3.0",
     "typescript": "^4.6.4",
+    "uvu": "^0.5.6",
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6"
   },
@@ -27,7 +40,9 @@
     "@suid/icons-material": "^0.2.5",
     "@suid/material": "^0.4.3",
     "@tauri-apps/api": "^1.0.1",
+    "babel-preset-solid": "^1.4.6",
     "solid-app-router": "^0.4.1",
-    "solid-js": "^1.4.2"
+    "solid-element": "^1.4.7",
+    "solid-js": "^1.4.7"
   }
 }

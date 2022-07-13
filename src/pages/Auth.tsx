@@ -1,7 +1,7 @@
 import TextField from '@suid/material/TextField'
 import { Link } from 'solid-app-router'
 import Box from '@suid/material/Box'
-import { Petals } from '../utils/consts'
+import { PetalAuth } from '../utils/consts'
 import Button from '@suid/material/Button'
 
 const auth = () => {
@@ -17,13 +17,13 @@ const auth = () => {
         >
             <TextField
                 id="outlined-basic"
-                label={Petals.userId}
+                label={PetalAuth.userId}
                 variant="outlined"
                 fullWidth
             />
             <TextField
                 id="filled-password-input"
-                label={Petals.pass}
+                label={PetalAuth.pass}
                 type="password"
                 autoComplete="current-password"
                 variant="filled"
